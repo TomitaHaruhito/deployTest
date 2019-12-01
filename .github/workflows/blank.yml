@@ -12,4 +12,4 @@ jobs:
     - name: Run a one-line script
       run: ssh-keygen -R ec2-user@ec2-3-115-111-84.ap-northeast-1.compute.amazonaws.com
     - name: Run a multi-line script
-      run: ssh -i "${{ secrets.SSH_KEY }}" ec2-user@ec2-3-115-111-84.ap-northeast-1.compute.amazonaws.com "sh deploy.sh"
+      run: ssh -i "${{ secrets.SSH_KEY }}" ec2-user@ec2-3-115-111-84.ap-northeast-1.compute.amazonaws.com "sh < deploy.sh"
